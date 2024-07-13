@@ -25,17 +25,13 @@ void loop()
   } 
   else 
   {
-    
     digitalWrite(redLedMotionPin, LOW); // Turn off the Red LED
     digitalWrite(greenLedNoMotionPin, HIGH); // Turn on the Green LED
     Serial.println("No motion. Green LED is ON.");
   }
 
   delay(1000); // Wait for 1000ms
-  
-  
 }
-
 // Interrupt Service Routine (ISR)
 void motionISR() {
   motionDetected = true; // Set the flag when motion is detected
